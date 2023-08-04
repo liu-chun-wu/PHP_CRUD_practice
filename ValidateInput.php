@@ -1,6 +1,3 @@
-<?php
-include("Menu.html");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +53,4 @@ if (isset($_POST["login"])) {
         echo "this is email is invalid<br>";
     }
 }
-?>
-<?php
-include("footer.html");
 ?>

@@ -1,20 +1,14 @@
 <?php
 include("Menu.html");
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <h3>這是首頁</h3>
-</body>
-
-</html>
-<?php
+if (!empty($_GET['goto'])) {
+    $goto = $_GET['goto'];
+} else {
+    $goto = 'main';
+}
+$file = $goto . '.php';
+if (file_exists($file)) {
+    include $file;
+} else {
+    include 'main.php';
+}
 include("footer.html");
-?>

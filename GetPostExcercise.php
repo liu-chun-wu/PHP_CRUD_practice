@@ -1,6 +1,3 @@
-<?php
-include("Menu.html");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +25,4 @@ if (isset($_POST["input"])) {
     echo "You bought {$quantity} apples <br>";
     echo "You spent {$total} dollars";
 }
-?>
-<?php
-include("footer.html");
 ?>

@@ -1,9 +1,3 @@
-<?php
-include("Menu.html");
-?>
-<?php
-include("header.html");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,10 +8,7 @@ include("header.html");
 </head>
 
 <body>
-    <h3>This is Location page</h3>
+    <h2>This is main</h2>
 </body>
 
 </html>
-<?php
-include("footer.html");
-?>

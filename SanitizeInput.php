@@ -1,6 +1,3 @@
-<?php
-include("Menu.html");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +15,7 @@ include("Menu.html");
         <label>age : </label>
         <input type="text" name="age"><br>
         <label>email : </label>
-        <input type="text" name="email"><BR>
+        <input type="text" name="email"><br>
         <input type="submit" name="login">
     </form>
 </body>
@@ -51,7 +48,4 @@ if (isset($_POST["login"])) {
         echo "Your email is {$email} ";
     }
 }
-?>
-<?php
-include("footer.html");
 ?>
