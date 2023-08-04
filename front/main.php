@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h2>This is main</h2>
+    <h2>This is main page!</h2>
 </body>
 
 </html>
