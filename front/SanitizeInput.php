@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SanitizeInput</title>
-</head>
-
 <body>
     <h2>Sanitize Practice</h2>
     <form action="index.php?goto=SanitizeInput" method="POST">
@@ -21,8 +12,6 @@
         <input type='reset' name='reset'>
     </form>
 </body>
-
-</html>
 <?php
 if (isset($_POST["sendData"]) && $_POST["sendData"] == 1) {
     $username = filter_input(
