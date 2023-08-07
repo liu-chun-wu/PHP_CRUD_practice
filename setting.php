@@ -43,6 +43,9 @@ class DB
         }
         return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     }
+    public function count()
+    {
+    }
 }
 function to($url)
 {
