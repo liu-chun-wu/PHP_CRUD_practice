@@ -8,17 +8,19 @@
 </head>
 
 <body>
-    <form action="GetPostExcercise.php" method="post">
+    <form action="index.php?goto=PostExcercise" method="post">
+        <label>A apple cost 10 dollars</label><br>
         <label>Quantity of apple :</label>
-        <input type="number" name="quantity"><br>
-        <input type="submit" name="input">
+        <input type="number" name="quantity" required><br>
+        <input type="submit">
+        <input type="reset">
     </form>
 
 </body>
 
 </html>
 <?php
-if (isset($_POST["input"])) {
+if (isset($_POST["quantity"])) {
     $quantity = $_POST["quantity"];
     $price = 10;
     $total = $quantity * $price;

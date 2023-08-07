@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h2>This is main page!</h2>
+    <h2>關於我的一些事</h2>
 </body>
 
 </html>

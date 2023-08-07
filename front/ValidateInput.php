@@ -9,20 +9,22 @@
 
 <body>
     <h2>Validate Practice</h2>
-    <form action="ValidateInput.php" method="POST">
+    <form action="index.php?goto=ValidateInput" method="POST">
         <label>username :</label>
-        <input type="text" name="username"><br>
+        <input type="text" name="username" required><br>
         <label>age : </label>
-        <input type="text" name="age"><br>
+        <input type="text" name="age" required><br>
         <label>email : </label>
         <input type="text" name="email"><BR>
-        <input type="submit" name="login">
+        <input type="hidden" name="sendData" value='1'>
+        <input type="submit">
+        <input type='reset' name='reset' required>
     </form>
 </body>
 
 </html>
 <?php
-if (isset($_POST["login"])) {
+if (isset($_POST["sendData"]) && $_POST["sendData"] == 1) {
     $username = filter_input(
         INPUT_POST,
         "username",
@@ -54,3 +56,10 @@ if (isset($_POST["login"])) {
     }
 }
 ?>
+
+<body>
+    <form action="index.php?goto=ValidateInput" method="post">
+        <input type="hidden" name="sendData" value='0'>
+        <button type="submit">Clear Output</button>
+    </form>
+</body>
