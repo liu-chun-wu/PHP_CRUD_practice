@@ -18,33 +18,78 @@ class DB
     public function all()
     {
         $sql = "select * from $this->table ";
-        return $this->pdo->query($sql)->fetchAll();
+
+        return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     }
-    public function find($arg)
+    public function findByArray($arg)
     {
         $sql = "select * from $this->table ";
 
-        //判斷參數是否為陣列，
-        //如果參數為陣列，則將陣列處理成where條件語句
-        //如果參數不是陣列，則視為資料id值
-        if (is_array($arg)) {
-
-            //利用迴圈及sprintf()來建立條件的字串陣列
-            foreach ($arg as $key => $value) {
-                $tmp[] = sprintf("`%s`='%s'", $key, $value);
-            }
-
-            //將字串陣列組合成條件語句字串
-            $sql = $sql . " where " . implode(" && ", $tmp);
-        } else {
-
-            //將參數視為id，並建立起條件語句字串
-            $sql = $sql . " where `id`='$arg'";
+        foreach ($arg as $key => $value) {
+            $tmp[] = sprintf(" %s = '%s'", $key, $value);
         }
+
+        $sql = $sql . " where " . implode(" && ", $tmp) . ";";
+
         return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     }
-    public function count()
+    public function findById($arg)
     {
+        $sql = "select * from $this->table ";
+
+        $sql = $sql . " where id = '$arg' ;";
+
+        return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
+    }
+    //輸入的值為陣列
+    public function countByArray($arg)
+    {
+        $sql = "select count(*) from $this->table ";
+
+        foreach ($arg as $key => $value) {
+            $tmp[] = sprintf(" %s = '%s' ", $key, $value);
+        }
+        $sql = $sql . " where " . implode(" && ", $tmp);
+
+        return $this->pdo->query($sql)->fetchColumn();
+    }
+    public function updateByArray($arg)
+    {
+        foreach ($arg as $key => $value) {
+            if ($key != 'id') {
+                $tmp[] = sprintf(" %s = '%s' ", $key, $value);
+                $sql = "update $this->table set " . implode(",", $tmp) . " where id = '" . $arg['id'] . "'";
+            }
+        }
+
+        return $this->pdo->exec($sql);
+    }
+    public function createByArray($arg)
+    {
+        $sql = "insert into $this->table ( " . implode(",", array_keys($arg)) . " ) values ( '" . implode("','", $arg) . "')";
+
+        return $this->pdo->exec($sql);
+    }
+    public function deleteByArray($arg)
+    {
+        foreach ($arg as $key => $value) {
+            $tmp[] = sprintf(" %s =  '%s' ", $key, $value);
+        }
+        $sql = "delete from $this->table where " . implode(" && ", $tmp);
+
+        $this->pdo->exec($sql);
+    }
+    public function deleteById($arg)
+    {
+        $sql = "delete from $this->table where id = " . $arg;
+        echo $sql;
+        //die();
+        $this->pdo->exec($sql);
+    }
+
+    public function q($sql)
+    {
+        $this->pdo->query($sql);
     }
 }
 function to($url)

@@ -1,10 +1,13 @@
 <header>
-    <h2>PHP NOTE</h2>
-    <a href="index.php">首頁</a> <a href="index.php?goto=login">管理員登入</a>
-    <p></p>
-    <table border="3" style="background-color:white">
+    <h2 align="center">PHP NOTE</h2>
+    <div align="center">
+        <a href="index.php">首頁</a> <a href="index.php?goto=login">管理員登入</a>
+    </div>
+    <table border="3" style="background-color:white" align="center">
         <tr align="center" style="background-color:lightblue">
+            <td></td>
             <td><a href="index.php?goto=VariablesandArithmetic">Variables and Arithmetic</a></td>
+            <td></td>
         </tr>
         <tr align="center" style="background-color:lightblue">
             <td><a href="index.php?goto=PostExcercise">$_POST</a></td>

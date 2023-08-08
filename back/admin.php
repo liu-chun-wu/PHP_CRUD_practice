@@ -1,7 +1,7 @@
-<?php
-include '../front/admin_header.php';
+<?
+include_once 'setting.php';
 ?>
-<div style="width:50%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
+<div style="width: 700px; border:#333 1px solid;">
     <p class="t cent botli">管理者帳號管理</p>
     <form method="post" action="">
         <table width="100%">
@@ -12,8 +12,7 @@ include '../front/admin_header.php';
                     <td width="10%">刪除</td>
                 </tr>
                 <?php
-                include '../setting.php';
-                //請參考title.php來讀懂以下的程式碼
+
                 $db = new DB('account');
                 $rows = $db->all();
                 foreach ($rows as $row) {

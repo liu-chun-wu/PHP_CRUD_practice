@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>excercise</title>
-</head>
-
 <body>
-    <form action="index.php?goto=PostExcercise" method="post">
+    <form action="index.php?goto=PostExcercise" method="post" align="center">
         <label>A apple cost 10 dollars</label><br>
         <label>Quantity of apple :</label>
         <input type="number" name="quantity" required><br>
