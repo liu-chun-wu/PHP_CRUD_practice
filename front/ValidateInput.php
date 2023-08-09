@@ -1,5 +1,5 @@
 <div style="margin:auto; border:1px solid #333; width: 350px;" align="left">
-    <form action="index.php?goto=SanitizeInput" method="post">
+    <form action="index.php?goto=ValidateInput" method="post">
         <h2 class="cent">Validate Input Practice</h2>
         <p class="cent">username : <input type="text" name="username" required></p>
         <p class="cent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age : <input type="text" name="age" required></p>
@@ -19,6 +19,7 @@
                 "username",
                 FILTER_SANITIZE_SPECIAL_CHARS
             );
+            // $username = $_POST['username'];
             $age = filter_input(
                 INPUT_POST,
                 "age",
@@ -46,7 +47,7 @@
         }
         ?>
     </div>
-    <form action="index.php?goto=SanitizeInput" method="post" align="center">
+    <form action="index.php?goto=ValidateInput" method="post" align="center">
         <input type="hidden" name="sendData" value='0'>
         <button type="submit">Clear Output</button>
     </form>

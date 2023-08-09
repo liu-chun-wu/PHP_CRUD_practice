@@ -1,7 +1,7 @@
 <header>
     <h2 align="center">PHP NOTE</h2>
     <div align="center">
-        <a align="center" href="../index.php">首頁</a> <a align="center" href="to('../index.php?do=login');">管理員登出</a>
+        <a align="center" href="index.php">首頁</a> <a align="center" href="index.php?goto=login">管理員登出</a>
     </div>
     <table border="3" style="background-color:white" align="center">
         <tr align="center" style="background-color:lightblue">

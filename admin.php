@@ -1,10 +1,9 @@
 <?php
+include_once 'setting.php';
 include 'front/admin_header.php';
-include_once './setting.php';
 ?>
 <div style="display:flex">
-    <div style="border:1px solid #333; height:500px; width:300px">
-
+    <div style="border:1px solid #333; height:500px; width:30%">
     </div>
     <?
     if (!empty($_GET['goto'])) {
@@ -19,7 +18,7 @@ include_once './setting.php';
         include 'back/admin.php';
     }
     ?>
-    <div style="border:1px solid #333; height:500px; width:300px">
+    <div style="border:1px solid #333; height:500px;width:30%">
 
     </div>
 </div>

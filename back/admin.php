@@ -1,7 +1,7 @@
 <?
 include_once 'setting.php';
 ?>
-<div style="width: 700px; border:#333 1px solid;">
+<div style="width: 40%; border:#333 1px solid;">
     <p class="t cent botli">管理者帳號管理</p>
     <form method="post" action="">
         <table width="100%">

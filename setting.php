@@ -41,7 +41,6 @@ class DB
 
         return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     }
-    //輸入的值為陣列
     public function countByArray($arg)
     {
         $sql = "select count(*) from $this->table ";
