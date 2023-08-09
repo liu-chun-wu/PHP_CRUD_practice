@@ -1,9 +1,20 @@
-<div style="margin:auto; border:1px solid #333; width: 350px;" align="left">
+<div style="margin:auto; border:1px solid #333; width: 350px;" align="center">
     <form action="index.php?goto=ValidateInput" method="post">
         <h2 class="cent">Validate Input Practice</h2>
-        <p class="cent">username : <input type="text" name="username" required></p>
-        <p class="cent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age : <input type="text" name="age" required></p>
-        <p class="cent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email :<input type="text" name="email" required></p>
+        <table>
+            <tr>
+                <td align="right">username :</td>
+                <td><input type="text" name="username" required></td>
+            </tr>
+            <tr>
+                <td align="right">age : </td>
+                <td><input type="text" name="age" required></td>
+            </tr>
+            <tr>
+                <td align="right">email : </td>
+                <td><input type="text" name="email" required></td>
+            </tr>
+        </table>
         <input type="hidden" name="sendData" value='1'>
         <input type="submit">
         <input type='reset' name='reset'>

@@ -60,7 +60,6 @@ class DB
                 $sql = "update $this->table set " . implode(",", $tmp) . " where id = '" . $arg['id'] . "'";
             }
         }
-
         return $this->pdo->exec($sql);
     }
     public function createByArray($arg)

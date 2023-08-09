@@ -8,13 +8,12 @@
 </div>
 <?php
 if (isset($_POST['name']) && isset($_POST['pwd'])) {
-    $accountDB = new DB('account');
+    $accountDB = new DB('admin');
     $name = $_POST['name'];
     $pwd = $_POST['pwd'];
     $check = $accountDB->findByArray(['name' => $name, 'password' => $pwd]);
     if (!empty($check)) {
         to('admin.php');
-        $_SESSION['login'] = $name;
     } else {
         echo "<script>alert('帳號或密碼錯誤')</script>";
     }
