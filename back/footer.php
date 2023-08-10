@@ -14,8 +14,8 @@
                 foreach ($data as $data) {
                 ?>
                     <tr class='cent'>
-                        <td><input type="text" name="author" value="<?= $data['author']; ?>" style='width:100%;text-align:center; '> </td>
-                        <td><input type="text" name="email" value="<?= $data['email']; ?>" style='width:100%;text-align:center; '> </td>
+                        <td><input type="text" name="author" value="<?= $data['author']; ?>" style='width:75%;text-align:center; '> </td>
+                        <td><input type="text" name="email" value="<?= $data['email']; ?>" style='width:75%;text-align:center; '> </td>
                         <input type="hidden" name="id" value="<?= $data['id']; ?>">
                     </tr>
                 <?php

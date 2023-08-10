@@ -1,5 +1,8 @@
 <?php
 include_once 'setting.php';
+if (!isset($_SESSION['login']) || $_SESSION['login'] != 'true') {
+    to('index.php?goto=login');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +10,7 @@ include_once 'setting.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>php practice</title>
+    <title>PHP Note</title>
     <link href="./css/css.css" rel="stylesheet" type="text/css">
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/js.js" defer></script>
@@ -39,8 +42,8 @@ include_once 'setting.php';
             <a style="color:#000; font-size:13px; text-decoration:none;" href="admin.php?goto=footer">
                 <div class="mainmu" align="center"> footer文字管理 </div>
             </a>
-            <a style="color:#000; font-size:13px; text-decoration:none;" href="admin.php?goto=admin_image">
-                <div class="mainmu" align="center"> 後台圖片管理 </div>
+            <a style="color:#000; font-size:13px; text-decoration:none;" href="admin.php?goto=visit_number">
+                <div class="mainmu" align="center"> 訪問人數管理 </div>
             </a>
         </div>
         <?
@@ -55,10 +58,12 @@ include_once 'setting.php';
         } else {
             include 'back/admin.php';
         }
+        $visit_number = new DB('visit_number');
+        $data = $visit_number->findById(1);
         ?>
         <div style="border:1px solid #333; height:450px;width:30%;align-items: center">
-            <p class="t cent botli">後臺圖片</p>
-            <img src="img\admin_img.jpeg" style="width:100%;display:block; margin:auto; ">
+            <p class="t cent botli">訪問人數</p>
+            <h2>你是第<?= $data['quantity']; ?>個訪問的人</h2>
         </div>
     </div>
 </body>

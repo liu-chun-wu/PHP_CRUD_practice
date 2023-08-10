@@ -1,7 +1,5 @@
 <?
 date_default_timezone_set('Asia/Taipei');
-session_start();
-
 class DB
 {
     private $dsn = 'mysql:host=localhost;charset=utf8;dbname=phpnote';
@@ -80,11 +78,9 @@ class DB
     public function deleteById($arg)
     {
         $sql = "delete from $this->table where id = " . $arg;
-        echo $sql;
-        //die();
+
         $this->pdo->exec($sql);
     }
-
     public function q($sql)
     {
         $this->pdo->query($sql);
@@ -93,4 +89,12 @@ class DB
 function to($url)
 {
     header("location:" . $url);
+}
+session_start();
+if (empty($_SESSION['visited'])) {
+    $visit_number = new DB('visit_number');
+    $num = $visit_number->findById(1);
+    $num['quantity']++;
+    $visit_number->updateByArray($num);
+    $_SESSION['visited'] = 1;
 }

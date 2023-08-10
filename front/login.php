@@ -14,6 +14,7 @@ if (isset($_POST['name']) && isset($_POST['pwd'])) {
     $check = $accountDB->findByArray(['name' => $name, 'password' => $pwd]);
     if (!empty($check)) {
         to('admin.php');
+        $_SESSION['login'] = 'true';
     } else {
         echo "<script>alert('帳號或密碼錯誤')</script>";
     }

@@ -30,7 +30,7 @@ function verifyPassword() {
 	if (password != password2) {
 		document.getElementById("message").innerHTML = "密碼和確認密碼不同!";
 		return false;
-	} else {
-		return true;
 	}
+	return true;
+
 }

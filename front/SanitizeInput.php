@@ -30,6 +30,8 @@
                 "username",
                 FILTER_SANITIZE_SPECIAL_CHARS
             );
+            //$username = $_POST['username'];
+            // <script>alert('這是惡意程式碼!')</script>
             $age = filter_input(
                 INPUT_POST,
                 "age",

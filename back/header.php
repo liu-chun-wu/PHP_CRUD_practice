@@ -13,7 +13,7 @@
                 foreach ($data as $data) {
                 ?>
                     <tr class='cent'>
-                        <td><input type="text" name="title" value="<?= $data['title']; ?>" style='width:100%;text-align:center; '> </td>
+                        <td><input type="text" name="title" value="<?= $data['title']; ?>" style='width:75%;text-align:center; '> </td>
                         <input type="hidden" name="id" value="<?= $data['id']; ?>">
                     </tr>
                 <?php
