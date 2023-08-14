@@ -4,7 +4,7 @@ class DB
 {
     private $dsn = 'mysql:host=localhost;charset=utf8;dbname=phpnote';
     private $root = 'root';
-    private $password = '';
+    private $password = 'root';
     private $table;
     private $pdo;
 
