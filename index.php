@@ -9,7 +9,7 @@ include_once 'setting.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Note</title>
     <link href="./css/css.css" rel="stylesheet" type="text/css">
-    <script src="./js/jquery-1.9.1.min.js"></script>
+    <script src="./js/jquery-1.9.1.min.js" defer></script>
     <script src="./js/js.js" defer></script>
 </head>
 
