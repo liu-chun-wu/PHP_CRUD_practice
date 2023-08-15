@@ -2,7 +2,7 @@
 date_default_timezone_set('Asia/Taipei');
 class DB
 {
-    private $dsn = 'mysql:host=localhost;charset=utf8;dbname=phpnote';
+    private $dsn = 'mysql:host=localhost;charset=utf8;dbname=phppractice';
     private $root = 'root';
     private $password = 'root';
     private $table;
