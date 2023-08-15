@@ -81,6 +81,11 @@ class DB
 
         $this->pdo->exec($sql);
     }
+    public function countColumns()
+    {
+        $sql = "select count(*) from $this->table ";
+        return $this->pdo->query($sql)->fetchColumn();
+    }
     public function q($sql)
     {
         $this->pdo->query($sql);

@@ -1,6 +1,6 @@
 <? $index_text = new DB('index_text'); ?>
 <div style="width: 40%; border:#333 1px solid;">
-    <p class="t cent botli">管理者帳號管理</p>
+    <p class="t cent botli">首頁文字管理</p>
     <form method="post" action="api\index_text_update.php">
         <table width="100%">
             <tbody>

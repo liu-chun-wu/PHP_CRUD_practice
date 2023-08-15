@@ -1,5 +1,5 @@
 <div style="width: 40%; border:#333 1px solid;">
-    <p class="t cent botli">管理者帳號管理</p>
+    <p class="t cent botli">頁首內容管理</p>
     <form method="post" action="api\header_update.php">
         <table width="100%">
             <tbody>

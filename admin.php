@@ -1,6 +1,6 @@
 <?php
 include_once 'setting.php';
-if (!isset($_SESSION['visited']) || !isset($_SESSION['login']) || $_SESSION['login'] != 'true') {
+if (!isset($_SESSION['login']) || $_SESSION['login'] != 'true') {
     to('index.php?goto=login');
 }
 ?>
